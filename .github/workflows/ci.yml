@@ -1,0 +1,25 @@
+
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependencias
+        run: echo "Aquí instala dependencias (ej: npm install, pip install, etc.)"
+
+      - name: Ejecutar tests
+        run: echo "Aquí ejecuta tests (ej: npm test, pytest, etc.)"
+
+      - name: Compilar proyecto
+        run: echo "Aquí agrega comandos de compilación si es necesario"
